@@ -1,0 +1,39 @@
+const script = document.createElement('script');
+script.src = 'https://cdn.jsdelivr.net/npm/mathjs@14/lib/browser/math.js';
+
+script.onload = function () {
+  console.log('Math.js tinkering examples');
+
+  // Calculate a rectangle's diagonal.
+  const diagonal = math.evaluate('sqrt(6^2 + 8^2)');
+  console.log('Diagonal of a 6-by-8 rectangle:', diagonal);
+
+  // Make a parser that remembers variables.
+  const parser = math.parser();
+  parser.evaluate('price = 12.50');
+  parser.evaluate('quantity = 4');
+  console.log('Total cost:', parser.evaluate('price * quantity'));
+
+  // Create a function and test it with different inputs.
+  parser.evaluate('area(width, height) = width * height');
+  console.log('Area of a 5-by-3 rectangle:', parser.evaluate('area(5, 3)'));
+  console.log('Area of a 10-by-2 rectangle:', parser.evaluate('area(10, 2)'));
+
+  // Convert feet to centimeters.
+  console.log('3 feet in centimeters:', math.evaluate('3 ft to cm').toString());
+
+  // Compare JavaScript decimal addition with Math.js.
+  console.log('JavaScript 0.1 + 0.2:', 0.1 + 0.2);
+  console.log('Math.js 0.1 + 0.2:', math.evaluate('0.1 + 0.2'));
+
+  // Add two matrices.
+  const matrixA = [[1, 2], [3, 4]];
+  const matrixB = [[5, 6], [7, 8]];
+  console.log('Matrix sum:', math.add(matrixA, matrixB).toString());
+};
+
+script.onerror = function () {
+  console.log('Math.js did not load. Check your internet connection.');
+};
+
+document.head.appendChild(script);

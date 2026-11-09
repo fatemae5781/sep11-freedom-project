@@ -44,6 +44,9 @@ console.log(math.evaluate("48 / 6"));       // 8
   * [Math.js video](https://www.youtube.com/watch?v=PFiXsJKfP_4)
 
 
+### 11/9/26
+* I experimented with Math.js by making my own small examples instead of only reading its documentation. I tried expression evaluation, variables, functions, units, matrices, and BigNumbers. I also changed the values in the examples to see what would happen. I learned that Math.js can do more than regular JavaScript math it can work with math expressions written as text, keep variables in a parser, and calculate with different kinds of numbers.The parser was useful because I could create variables once and use them in later calculations. I also changed the input to my area function to test that it worked with different dimensions. The unit example showed that Math.js understands measurements, not just plain numbers. The BigNumber test was interesting because normal JavaScript numbers gave a tiny rounding error, while Math.js returned 0.3. So overall, I learned that the library can handle many types of math in a short amount of code, and that changing the examples helped me understand how its features work. 
+* I have the code on math.js2.md
 <!-- 
 * Links you used today (websites, videos, etc)
 * Things you tried, progress you made, etc
